@@ -6,6 +6,10 @@ import { ReadChapter } from "../utils/chapter.js";
 import { SearchManga } from "../utils/search.js";
 export const route = express.Router();
 
+route.get("/", async (resq, resp) => {
+  resp.send("Welcome to Manga api 😄");
+});
+
 route.get("/manga/search/:id", async (resq, resp) => {
   const { id } = resq.params;
   if (!id) {
