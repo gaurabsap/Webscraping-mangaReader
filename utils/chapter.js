@@ -4,7 +4,10 @@ import puppeteer from "puppeteer";
 export const ReadChapter = async (id) => {
   const browser = await puppeteer.launch({
     headless: true,
+    executablePath: undefined,
   });
+  const executablePath = puppeteer.executablePath();
+  console.log(`Executable Path: ${executablePath}`);
   const page = await browser.newPage();
   await page.goto(`https://mangareader.to/read/${id}`);
   await page.evaluate(() => {
