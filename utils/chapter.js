@@ -4,10 +4,6 @@ import puppeteer from "puppeteer";
 export const ReadChapter = async (id) => {
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath:
-      process.env.ENV === "production"
-        ? process.env.PUPPETEER_EXECUTABLE
-        : puppeteer.executablePath(),
   });
   try {
     const page = await browser.newPage();
