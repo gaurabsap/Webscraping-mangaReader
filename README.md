@@ -50,13 +50,8 @@ For manga-related information:
 - `/manga/info/:id`: Replace `:id` with the ID of the specific manga you want detailed information about.
 - `/manga/read/chapter?chapterId=:chapterId`: Replace `:chapterId` with the chapter ID to read manga chapters.
 
-## Contributing
 
-Contributions are welcome! If you find any issues or want to enhance the API, feel free to open a pull request. Make sure to follow good coding practices and provide clear descriptions of your changes.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
