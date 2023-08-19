@@ -7,9 +7,7 @@ import { SearchManga } from "../utils/search.js";
 export const route = express.Router();
 
 route.get("/", async (resq, resp) => {
-  resp.send(
-    "Welcome to Manga api 😄 \n routes \n /manga/search:search \n /manga/genre/:genre \n /manga/info/:id \n /manga/read/chapter?id=:id"
-  );
+  resp.send("Welcome to Manga api 😄");
 });
 
 route.get("/routes", async (resq, resp) => {
