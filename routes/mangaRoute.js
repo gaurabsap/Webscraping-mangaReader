@@ -12,6 +12,17 @@ route.get("/", async (resq, resp) => {
   );
 });
 
+route.get("/routes", async (resq, resp) => {
+  resp.status(200).json({
+    routes: {
+      search: "/manga/search/:search",
+      genre: "/manga/genre/:genre",
+      info: " /manga/info/:id",
+      chapters: "/manga/read/chapter?chapterId=:chapterId",
+    },
+  });
+});
+
 route.get("/manga/search/:id", async (resq, resp) => {
   const { id } = resq.params;
   if (!id) {
@@ -67,14 +78,14 @@ route.get("/manga/info/:id", async (resq, resp) => {
 });
 
 route.get("/manga/read/chapter", async (resq, resp) => {
-  const { id } = resq.query;
-  console.log(id);
-  if (!id) {
+  const { chapterId } = resq.query;
+  // console.log(id);
+  if (!chapterId) {
     return resp.status(400).json({
       message: "ChapterId is required",
     });
   }
-  const data = await ReadChapter(id);
+  const data = await ReadChapter(chapterId);
   return resp.status(200).json({
     data,
   });
