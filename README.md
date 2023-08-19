@@ -9,8 +9,6 @@ Welcome to the Manga API! This API provides endpoints to retrieve information ab
 - [Installation](#installation)
 - [Usage](#usage)
 - [Endpoints](#endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
