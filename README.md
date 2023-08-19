@@ -52,8 +52,3 @@ For manga-related information:
 
 
 
-
----
-
-Feel free to customize this README template with more details about your project, including installation instructions, prerequisites, and any additional information you think is important for users and contributors.
-
