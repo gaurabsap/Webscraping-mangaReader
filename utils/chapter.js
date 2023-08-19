@@ -2,9 +2,7 @@ import * as cheerio from "cheerio";
 import puppeteer from "puppeteer";
 
 export const ReadChapter = async (id) => {
-  const browser = await puppeteer.launch({
-    headless: "new",
-  });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(`https://mangareader.to/read/${id}`);
   await page.evaluate(() => {
