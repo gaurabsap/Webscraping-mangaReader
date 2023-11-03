@@ -12,7 +12,6 @@ export const MangaReader = async (endpoint) => {
     const images = $(data).find("a > img").attr("src");
     const title = $(data).find(".manga-detail > h3 > a").text();
     const lang = $(data).find("a > span").text();
-    // console.log(lang);
     const genrearr = [];
     $(data)
       .find(".fd-infor > span")
@@ -20,7 +19,6 @@ export const MangaReader = async (endpoint) => {
         const genres = $(gen).text().trim().replace(/\s+/g, " ");
         genrearr.push(genres);
       });
-    // console.log(genrearr);
     Mangas.push({
       id,
       title,
@@ -28,7 +26,6 @@ export const MangaReader = async (endpoint) => {
       lang,
       genre: genrearr,
     });
-    // console.log(Mangas);
   });
   return Mangas;
 };
